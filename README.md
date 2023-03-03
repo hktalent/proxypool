@@ -227,6 +227,12 @@ func run(ipChan chan<- *models.IP) {
     ...
 }
 ```
+### submodule
+```
+git submodule add --force git@github.com:ALIILAPRO/Proxy.git conf/ALIILAPRO_Proxy
+git submodule add --force git@github.com:roosterkid/openproxylist.git conf/openproxylist
+git submodule add --force git@github.com:BlackSnowDot/proxylist-update-every-minute.git conf/proxylist-update-every-minute
+```
 
 ### 5、异常恢复
 

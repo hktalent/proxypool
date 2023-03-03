@@ -6,7 +6,10 @@ import (
 	"github.com/hktalent/htmlquery"
 	"github.com/hktalent/proxypool/pkg/models"
 	"github.com/tidwall/gjson"
+	"io/fs"
 	"log"
+	"os"
+	"path/filepath"
 	"regexp"
 	"strings"
 )
@@ -16,6 +19,26 @@ const (
 )
 
 var ExprIP = regexp.MustCompile(`((25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\:([0-9]+)`)
+
+func LoadStatic() (result []*models.IP) {
+	if szPwd, err := os.Getwd(); nil == err {
+		szPath := "/conf/"
+		for _, x := range []string{"ALIILAPRO_Proxy", "openproxylist", "proxylist-update-every-minute"} {
+			szCur := szPwd + szPath + x + "/"
+			var Visit = func(path string, d fs.DirEntry, err error) error {
+				if strings.HasSuffix(path, ".txt") {
+
+				}
+				return nil
+			}
+
+			if err := filepath.WalkDir(szCur, Visit); nil != err {
+				fmt.Printf("filepath.WalkDir() returned %v\n", err)
+			}
+		}
+	}
+	return
+}
 
 func FreeProxyList() (result []*models.IP) {
 	pollURL := "https://free-proxy-list.net"

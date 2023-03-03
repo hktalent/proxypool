@@ -1,0 +1,6 @@
+[submodule "conf/ALIILAPRO_Proxy"]
+	path = conf/ALIILAPRO_Proxy
+	url = git@github.com:ALIILAPRO/Proxy.git
+[submodule "conf/openproxylist"]
+	path = conf/openproxylist
+	url = git@github.com:roosterkid/openproxylist.git

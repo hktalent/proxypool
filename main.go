@@ -47,13 +47,14 @@ func main() {
 		if len(ipChan) < 10000 {
 			go run(ipChan)
 		}
-		time.Sleep(1 * time.Minute)
+		time.Sleep(10 * time.Minute)
 	}
 }
 
 func run(ipChan chan<- *models.IP) {
 	var wg sync.WaitGroup
 	funs := []func() []*models.IP{
+		getter.LoadStatic,
 		getter.FQDL,  //新代理
 		getter.PZZQZ, //新代理
 		getter.Fatezero,
