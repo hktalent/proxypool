@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/henson/proxypool/pkg/models"
+	"github.com/hktalent/proxypool/pkg/models"
 	"github.com/nladuo/go-phantomjs-fetcher"
 )
 

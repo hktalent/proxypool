@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/henson/proxypool/pkg/models"
+	"github.com/hktalent/proxypool/pkg/models"
 	"github.com/parnurzeal/gorequest"
 	clog "unknwon.dev/clog/v2"
 )

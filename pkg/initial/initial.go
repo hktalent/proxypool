@@ -6,9 +6,9 @@ import (
 
 	"github.com/go-ini/ini"
 	"github.com/go-xorm/xorm"
-	"github.com/henson/proxypool/pkg/models"
-	"github.com/henson/proxypool/pkg/setting"
-	"github.com/henson/proxypool/pkg/util"
+	"github.com/hktalent/proxypool/pkg/models"
+	"github.com/hktalent/proxypool/pkg/setting"
+	"github.com/hktalent/proxypool/pkg/util"
 	clog "unknwon.dev/clog/v2"
 )
 

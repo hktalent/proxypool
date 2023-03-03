@@ -3,8 +3,8 @@ package getter
 import (
 	clog "unknwon.dev/clog/v2"
 
-	"github.com/henson/proxypool/pkg/models"
 	"github.com/hktalent/htmlquery"
+	"github.com/hktalent/proxypool/pkg/models"
 )
 
 //PLP get ip from proxylistplus.com

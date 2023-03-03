@@ -2,11 +2,16 @@
 
 > 采集免费的代理资源为爬虫提供有效的IP代理
 
-[![Travis Status for henson/proxypool](https://travis-ci.org/henson/proxypool.svg?branch=master)](https://travis-ci.org/henson/proxypool) [![Go Report Card](https://goreportcard.com/badge/github.com/henson/proxypool)](https://goreportcard.com/report/github.com/henson/proxypool)
+[![Travis Status for hktalent/proxypool](https://travis-ci.org/hktalent/proxypool.svg?branch=master)](https://travis-ci.org/hktalent/proxypool) [![Go Report Card](https://goreportcard.com/badge/github.com/hktalent/proxypool)](https://goreportcard.com/report/github.com/hktalent/proxypool)
+
+## 新特性
+- 增加若干 代理 目标
+- 捕获异常避免中途退出
+- 修复 htmlquery.LoadURL 支持 https 无效数字证书bug
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/henson/proxypool.svg)](https://starchart.cc/henson/proxypool)
+[![Stargazers over time](https://starchart.cc/hktalent/proxypool.svg)](https://starchart.cc/hktalent/proxypool)
 
 ## 版本更新
 
@@ -17,7 +22,7 @@
   - 更新 在插入数据时先检查库中是否存在，如果存在就更新，不存在则插入到数据库
   - 更新 https proxy api的相关参数
 - 2019年3月28日 v2.3 感谢 [@sndnvaps](https://github.com/sndnvaps)
-  - 修复数据库中不存在https代理源的时候查询出错的问题。解决[问题#31](https://github.com/henson/proxypool/issues/31)
+  - 修复数据库中不存在https代理源的时候查询出错的问题。解决[问题#31](https://github.com/hktalent/proxypool/issues/31)
 - 2019年2月2日 v2.2 感谢 [@sndnvaps](https://github.com/sndnvaps)
   - 添加MAC Darwin平台的支持
   - 添加完全的 sqlite3 支持
@@ -173,7 +178,7 @@ github.com/nladuo/go-phantomjs-fetcher
 
 下载本项目：
 ```
-go get -u github.com/henson/proxypool
+go get -u github.com/hktalent/proxypool
 ```
 
 然后配置好相应的app.ini并启动：

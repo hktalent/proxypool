@@ -11,7 +11,7 @@ import (
 	"time"
 
 	sj "github.com/bitly/go-simplejson"
-	"github.com/henson/proxypool/pkg/models"
+	"github.com/hktalent/proxypool/pkg/models"
 	clog "unknwon.dev/clog/v2"
 )
 

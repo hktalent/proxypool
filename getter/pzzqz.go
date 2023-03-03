@@ -1,8 +1,8 @@
 package getter
 
 import (
-	"github.com/henson/proxypool/pkg/models"
 	"github.com/hktalent/htmlquery"
+	"github.com/hktalent/proxypool/pkg/models"
 	"log"
 	clog "unknwon.dev/clog/v2"
 )

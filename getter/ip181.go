@@ -8,7 +8,7 @@ import (
 
 	clog "unknwon.dev/clog/v2"
 
-	"github.com/henson/proxypool/pkg/models"
+	"github.com/hktalent/proxypool/pkg/models"
 	"github.com/parnurzeal/gorequest"
 )
 

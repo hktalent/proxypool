@@ -4,7 +4,7 @@ go:
   - master
 notifications:
   recipients:
-    - henson.lu@gmail.com
+    - hktalent.lu@gmail.com
   email:
     on_success: change
     on_failure: always

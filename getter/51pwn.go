@@ -3,8 +3,8 @@ package getter
 import (
 	"bufio"
 	"fmt"
-	"github.com/henson/proxypool/pkg/models"
 	"github.com/hktalent/htmlquery"
+	"github.com/hktalent/proxypool/pkg/models"
 	"github.com/tidwall/gjson"
 	"log"
 	"regexp"

@@ -1,4 +1,4 @@
-module github.com/henson/proxypool
+module github.com/hktalent/proxypool
 
 go 1.19
 

@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/go-ini/ini"
-	"github.com/henson/proxypool/pkg/util"
+	"github.com/hktalent/proxypool/pkg/util"
 	clog "unknwon.dev/clog/v2"
 )
 

@@ -1,11 +1,9 @@
 package rpc
 
 import (
-	"github.com/henson/proxypool/pkg/storage"
-	"github.com/henson/proxypool/pkg/rpc/grpc-proxypool"
+	"github.com/hktalent/proxypool/pkg/rpc/grpc-proxypool"
+	"github.com/hktalent/proxypool/pkg/storage"
 	"golang.org/x/net/context"
-	"google.golang.org/grpc"
-	"net"
 )
 
 type ProxyPoolGRPCService struct{}

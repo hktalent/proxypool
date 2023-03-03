@@ -5,8 +5,8 @@ import (
 	"log"
 	clog "unknwon.dev/clog/v2"
 
-	"github.com/henson/proxypool/pkg/models"
 	"github.com/hktalent/htmlquery"
+	"github.com/hktalent/proxypool/pkg/models"
 )
 
 // IP3306 get ip from http://www.ip3366.net/

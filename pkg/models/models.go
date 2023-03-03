@@ -12,7 +12,7 @@ import (
 	"github.com/go-clog/clog"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"
-	"github.com/henson/proxypool/pkg/setting"
+	"github.com/hktalent/proxypool/pkg/setting"
 	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
 	"xorm.io/core"

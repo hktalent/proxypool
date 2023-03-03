@@ -6,11 +6,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/henson/proxypool/api"
-	"github.com/henson/proxypool/getter"
-	"github.com/henson/proxypool/pkg/initial"
-	"github.com/henson/proxypool/pkg/models"
-	"github.com/henson/proxypool/pkg/storage"
+	"github.com/hktalent/proxypool/api"
+	"github.com/hktalent/proxypool/getter"
+	"github.com/hktalent/proxypool/pkg/initial"
+	"github.com/hktalent/proxypool/pkg/models"
+	"github.com/hktalent/proxypool/pkg/storage"
 )
 
 func main() {
@@ -44,10 +44,10 @@ func main() {
 	for {
 		n := models.CountIPs()
 		log.Printf("Chan: %v, IP: %v\n", len(ipChan), n)
-		if len(ipChan) < 100 {
+		if len(ipChan) < 10000 {
 			go run(ipChan)
 		}
-		time.Sleep(10 * time.Minute)
+		time.Sleep(1 * time.Minute)
 	}
 }
 

@@ -10,7 +10,7 @@ import (
 
 	"strings"
 
-	"github.com/henson/proxypool/pkg/models"
+	"github.com/hktalent/proxypool/pkg/models"
 )
 
 // IP89 get ip from www.89ip.cn

@@ -5,8 +5,8 @@ import (
 	"log"
 	clog "unknwon.dev/clog/v2"
 
-	"github.com/henson/proxypool/pkg/models"
 	"github.com/hktalent/htmlquery"
+	"github.com/hktalent/proxypool/pkg/models"
 )
 
 // PLPSSL get ip from proxylistplus.com
