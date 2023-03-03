@@ -2,16 +2,10 @@
 
 > 采集免费的代理资源为爬虫提供有效的IP代理
 
-[![Travis Status for hktalent/proxypool](https://travis-ci.org/hktalent/proxypool.svg?branch=master)](https://travis-ci.org/hktalent/proxypool) [![Go Report Card](https://goreportcard.com/badge/github.com/hktalent/proxypool)](https://goreportcard.com/report/github.com/hktalent/proxypool)
-
 ## 新特性
 - 增加若干 代理 目标
 - 捕获异常避免中途退出
 - 修复 htmlquery.LoadURL 支持 https 无效数字证书bug
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/hktalent/proxypool.svg)](https://starchart.cc/hktalent/proxypool)
 
 ## 版本更新
 
