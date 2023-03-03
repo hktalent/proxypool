@@ -62,7 +62,6 @@ func init() {
 	if AppPath, err = execPath(); err != nil {
 		clog.Fatal("Fail to get app path: %v\n", err)
 	}
-
 	// Note: we don't use path.Dir here because it does not handle case
 	//	which path starts with two "/" in Windows: "//psf/Home/..."
 	AppPath = strings.Replace(AppPath, "\\", "/", -1)
@@ -70,16 +69,17 @@ func init() {
 
 // WorkDir returns absolute path of work directory.
 func WorkDir() (string, error) {
-	wd := os.Getenv("ALIGN_WORK_DIR")
-	if len(wd) > 0 {
-		return wd, nil
-	}
-
-	i := strings.LastIndex(AppPath, "/")
-	if i == -1 {
-		return AppPath, nil
-	}
-	return AppPath[:i], nil
+	return os.Getwd()
+	//wd := os.Getenv("ALIGN_WORK_DIR")
+	//if len(wd) > 0 {
+	//	return wd, nil
+	//}
+	//
+	//i := strings.LastIndex(AppPath, "/")
+	//if i == -1 {
+	//	return AppPath, nil
+	//}
+	//return AppPath[:i], nil
 }
 
 func forcePathSeparator(path string) {
@@ -95,7 +95,7 @@ func NewContext() {
 	if err != nil {
 		clog.Fatal("Fail to get work directory: %v", err)
 	}
-	ConfFile = path.Join(workDir, "conf/app.ini")
+	ConfFile = path.Join(workDir, "/conf/app.ini")
 
 	//Cfg, err = ini.Load("conf/example_app.ini")
 	Cfg, err = ini.Load(ConfFile)
@@ -120,7 +120,7 @@ func NewContext() {
 	SessionExpires = sec.Key("SESSION_EXPIRES").MustDuration(time.Hour * 24 * 7)
 }
 
-//NewLogService Init clog service
+// NewLogService Init clog service
 func NewLogService() {
 	// Because we always create a console logger as primary logger before all settings are loaded,
 	// thus if user doesn't set console logger, we should remove it after other loggers are created.

@@ -73,13 +73,13 @@ func run(ipChan chan<- *models.IP) {
 	for _, f := range funs {
 		wg.Add(1)
 		go func(f func() []*models.IP) {
+			defer wg.Done()
 			temp := f()
 			//log.Println("[run] get into loop")
 			for _, v := range temp {
 				//log.Println("[run] len of ipChan %v",v)
 				ipChan <- v
 			}
-			wg.Done()
 		}(f)
 	}
 	wg.Wait()

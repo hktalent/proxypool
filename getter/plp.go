@@ -3,20 +3,18 @@ package getter
 import (
 	clog "unknwon.dev/clog/v2"
 
-	"github.com/Aiicy/htmlquery"
 	"github.com/henson/proxypool/pkg/models"
+	"github.com/hktalent/htmlquery"
 )
 
 //PLP get ip from proxylistplus.com
 func PLP() (result []*models.IP) {
 	pollURL := "https://list.proxylistplus.com/Fresh-HTTP-Proxy-List-1"
 	doc, _ := htmlquery.LoadURL(pollURL)
-	trNode, err := htmlquery.Find(doc, "//div[@class='hfeed site']//table[@class='bg']//tbody//tr")
-	if err != nil {
-		clog.Warn(err.Error())
-	}
+	trNode := htmlquery.Find(doc, "//div[@class='hfeed site']//table[@class='bg']//tbody//tr")
+
 	for i := 3; i < len(trNode); i++ {
-		tdNode, _ := htmlquery.Find(trNode[i], "//td")
+		tdNode := htmlquery.Find(trNode[i], "//td")
 		ip := htmlquery.InnerText(tdNode[1])
 		port := htmlquery.InnerText(tdNode[2])
 		Type := htmlquery.InnerText(tdNode[6])

@@ -6,6 +6,7 @@ import (
 	"crypto/tls"
 	"net/http"
 	"net/url"
+	"strings"
 	"sync"
 	"time"
 
@@ -23,14 +24,14 @@ func CheckProxy(ip *models.IP) {
 
 // CheckIP is to check the ip work or not
 func CheckIP(ip *models.IP) bool {
-	var pollURL string
+	var pollURL string = szCheckUrl
 	var testIP string
 	if ip.Type2 == "https" {
 		testIP = "https://" + ip.Data
-		pollURL = "https://httpbin.org/get?show_env=1"
+	} else if strings.HasPrefix(ip.Type2, "socks") {
+		return CheckSocks5(ip.Data)
 	} else {
 		testIP = "http://" + ip.Data
-		pollURL = "http://httpbin.org/get?show_env=1"
 	}
 	proxy, _ := url.Parse(testIP)
 

@@ -161,7 +161,7 @@ github.com/go-xorm/xorm
 github.com/go-xorm/core
 github.com/go-sql-driver/mysql
 github.com/lib/pq
-github.com/Aiicy/htmlquery
+github.com/hktalent/htmlquery
 github.com/PuerkitoBio/goquery
 github.com/parnurzeal/gorequest
 github.com/nladuo/go-phantomjs-fetcher
