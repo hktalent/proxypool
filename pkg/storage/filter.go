@@ -28,7 +28,7 @@ func CheckIP(ip *models.IP) bool {
 	var testIP string
 	if ip.Type2 == "https" {
 		testIP = "https://" + ip.Data
-	} else if strings.HasPrefix(ip.Type2, "socks") {
+	} else if strings.HasPrefix(ip.Type2, "socks") || strings.HasPrefix(ip.Type1, "socks") {
 		return CheckSocks5(ip.Data)
 	} else {
 		testIP = "http://" + ip.Data

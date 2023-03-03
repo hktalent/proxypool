@@ -8,7 +8,6 @@ import (
 	//"fmt"
 	clog "unknwon.dev/clog/v2"
 
-	"regexp"
 	"strings"
 
 	"github.com/henson/proxypool/pkg/models"
@@ -17,7 +16,6 @@ import (
 // IP89 get ip from www.89ip.cn
 func IP89() (result []*models.IP) {
 	clog.Info("89IP] start test")
-	var ExprIP = regexp.MustCompile(`((25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\:([0-9]+)`)
 	// https://www.89ip.cn/tqdl.html?api=1&num=9999&port=&address=日本&isp=
 	for _, x := range []string{"日本", "%E7%BE%8E%E5%9B%BD", "新加坡", "加拿大"} {
 		pollURL := fmt.Sprintf("http://www.89ip.cn/tqdl.html?api=1&num=9999&port=&address=%s&isp=", x)

@@ -15,9 +15,6 @@ func FQDL() (result []*models.IP) {
 		log.Println("fanqieip", err)
 	} else {
 		trNode := htmlquery.Find(doc, "//table[@class='layui-table']//tbody//tr")
-		if err != nil {
-			clog.Warn(err.Error())
-		}
 		for i := 0; i < len(trNode); i++ {
 			tdNode := htmlquery.Find(trNode[i], "//td")
 			ip := extractTextFromDivNode(tdNode[0])

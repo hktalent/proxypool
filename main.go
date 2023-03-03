@@ -56,6 +56,10 @@ func run(ipChan chan<- *models.IP) {
 	funs := []func() []*models.IP{
 		getter.FQDL,  //新代理
 		getter.PZZQZ, //新代理
+		getter.Fatezero,
+		getter.Freeproxylists,
+		getter.FreeProxyList,
+		getter.Geonode,
 		//getter.Data5u,
 		//getter.Feiyi,
 		//getter.IP66, //need to remove it
@@ -73,6 +77,11 @@ func run(ipChan chan<- *models.IP) {
 	for _, f := range funs {
 		wg.Add(1)
 		go func(f func() []*models.IP) {
+			defer func() {
+				if err := recover(); nil != err {
+					log.Println(err)
+				}
+			}()
 			defer wg.Done()
 			temp := f()
 			//log.Println("[run] get into loop")

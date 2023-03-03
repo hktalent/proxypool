@@ -73,6 +73,10 @@
 7. ~~[讯代理](http://www.xdaili.cn/freeproxy.html)~~
 8. ~~[无忧代理](http://www.data5u.com/free/index.shtml)~~
 9. [Proxylist+](https://list.proxylistplus.com)
+10. https://free-proxy-list.net
+11. https://www.freeproxylists.net/
+12. https://proxylist.geonode.com
+13. http://proxylist.fatezero.org
 
 - Pkg：
 

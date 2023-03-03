@@ -34,6 +34,9 @@ require (
 	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/pkg/errors v0.8.1 // indirect
 	github.com/smartystreets/goconvey v1.6.4 // indirect
+	github.com/tidwall/gjson v1.14.4 // indirect
+	github.com/tidwall/match v1.1.1 // indirect
+	github.com/tidwall/pretty v1.2.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect
 	golang.org/x/text v0.7.0 // indirect
 	google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013 // indirect
